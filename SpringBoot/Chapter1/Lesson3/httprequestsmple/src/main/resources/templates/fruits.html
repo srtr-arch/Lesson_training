@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<h1>選択したフルーツ</h1>
+<ul th:each="fruit:${fruits}">
+    <li th:text="${fruit}"></li>
+</ul>
+<body>
+    
+</body>
+</html>

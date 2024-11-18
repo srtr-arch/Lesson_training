@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>従業員追加登録</title>
+</head>
+<body>
+    <h1>従業員追加登録</h1>
+    <form th:action="@{/employees/add}" th:object="${employee}" th:method="post">
+        <p>氏名:<input type="text" th:field="*{name}"></p>
+        
+
+        <p>
+            <select id="company" th:field="*{company.id}">
+                <option value="">会社名を選択</option>
+                <option  th:each="company : ${companies}"
+                        th:value="${company.id}"
+                    th:text="${company.name}">ジャンル名 </option>
+
+            </select>
+        </p>
+        <input type="submit" value="登録">
+    </form>
+</body>
+</html>

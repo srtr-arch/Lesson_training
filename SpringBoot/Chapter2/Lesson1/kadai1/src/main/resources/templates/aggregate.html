@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>集計</title>
+</head>
+<body>
+    <h1>集計</h1>
+    <h2>総得点</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>一郎</th>
+                <th>二郎</th>
+                <th>三郎</th>
+                <th>四郎</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${socres[0]}"></td>
+            <td th:text="${socres[1]}"></td>
+            <td th:text="${socres[2]}"></td>
+            <td th:text="${socres[3]}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <h1>平均点</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>テスト1</th>
+                <th>テスト2</th>
+                <th>テスト3</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${#aggregates.avg(scores1)}"></td>
+                <td th:text="${#aggregates.avg(scores2)}"></td>
+                <td th:text="${#aggregates.avg(scores3)}"></td>
+            
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GET送信するフォーム</title>
+</head>
+<body>
+    <form action="/many" method="get">
+        お名前:<input type="text" name="name"><br>
+        年齢:<input type="text" name="age"><br>
+        住所:<input type="text" name="address"><br>
+        <input type="submit" value="GET送信"><br>
+    </form>
+    <h1>POST通信</h1>
+    <form action="/postmany" method="post">
+    お名前:<input type="text" name="name"><br>
+    年齢:<input type="text" name="age"><br>
+    住所:<input type="text" name="address"><br>
+    <input type="submit" value="POST送信"><br>
+</form>
+
+</body>
+</html>

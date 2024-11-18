@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー追加</title>
+</head>
+<body>
+    <h1>ユーザー追加</h1>
+    <form th:action="@{/users/add}" th:object="${user}" th:method="post">
+        <P>ユーザー名:<input type="text" th:field="*{name}"></P>
+        <P>年齢:<input type="number" th:field="*{age}"></P>
+        <P>テスト1の得点:<input type="number" th:field="*{score1}"></P>
+        <P>テスト2の得点:<input type="number" th:field="*{score2}"></P>
+        <P>テスト3の得点:<input type="number" th:field="*{score3}"></P>
+        <input type="submit" value ="追加">
+    </form>
+    
+</body>
+</html>

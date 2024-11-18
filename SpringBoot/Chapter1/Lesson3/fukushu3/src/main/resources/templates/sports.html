@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:yh="http://www.thymeleaf">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form th:action="@{/submit}" th:method="get" >
+        <input type="checkbox" name="sport" value="野球">野球<br>
+        <input type="checkbox" name="sport" value="サッカー">サッカー<br>
+        <input type="checkbox" name="sport" value="相撲">相撲<br>
+        <input type="checkbox" name="sport" value="バレーボール">バレーボール<br>
+        <input type="checkbox" name="sport" value="バスケットボール">バスケットボール<br>
+        <input type="submit" name="送信"><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>会社情報更新</title>
+</head>
+<body>
+    <h1>会社情報更新</h1>
+    <form th:action="@{/companies/edit}" th:object="${company}" th:method="get">
+        <input type="hidden" th:field="*{id}">
+        <p>会社名:<input type="text" th:field="*{name}"></p>
+        
+        <input type="submit" value="登録">
+    </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<!Doctype html>
+<html lang="ja" xmlns="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Format LocalDateTime</title>
+    </head>
+    <body>
+        <p th:text="${#temporals.format(now,'yyyy-MM-dd HH:mm:ss')}">デフォルトの日時</p>
+        <p th:text="${#temporals.format(now,'yyyy/MM/dd HH:mm')}">デフォルトの日時</p>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Result</h2>
+    <p th:text="'Name: '+${userInput.name}"></p>
+    <p th:text="'Age: '+${userInput.age}"></p>
+    <p th:text="'Address: '+${userInput.getAddress()}"></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザーリスト</title>
+</head>
+<body>
+        <h1>ユーザーリスト</h1>
+        <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>年齢</th>
+                <th>テスト1の得点</th>
+                <th>テスト2の得点</th>
+                <th>テスト3の得点</th>
+            </tr>
+            </thead>
+                <tbody>
+                    <tr th:each="user:${users}">
+                        <td th:text="${user.id}"></td>
+                        <td th:text="${user.name}"></td>
+                        <td th:text="${user.age}"></td>
+                        <td th:text="${user.score1}"></td>
+                        <td th:text="${user.score2}"></td>
+                        <td th:text="${user.score3}"></td>
+                    </tr>
+                </tbody>
+        </table>
+    
+</body>
+</html>

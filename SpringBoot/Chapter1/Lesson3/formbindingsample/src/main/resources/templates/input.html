@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMバインディング</h1>
+    <form action="/receive" method="post" th:object="${userInput}">
+        アカウント<input type="text" th:field="*{account}" name="account"><br>
+        パスワード<input type="password" th:field="*{password}" name="password"><br>
+        <input type="submit" value="送信">
+    </form>
+    
+</body>
+</html>

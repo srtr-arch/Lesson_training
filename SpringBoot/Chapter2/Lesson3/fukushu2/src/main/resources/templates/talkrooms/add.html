@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>トークルーム追加</title>
+</head>
+<body>
+    <h1>トークルーム追加</h1>
+
+    <form th:action="@{/talkrooms/add}" th:object="${talkroom}" th:method="post">
+        <p>トークルーム名：<input type="text" th:field="*{name}"></p>
+        <p>ユーザー名</p>
+        <div th:each="user:${users}">
+            <input type="checkbox" th:field="*{users}" th:value="${user.id}">
+            <span th:text="${user.name}"></span>
+        </div>
+        <input type="submit" value="追加">
+    </form>
+</body>
+</html>

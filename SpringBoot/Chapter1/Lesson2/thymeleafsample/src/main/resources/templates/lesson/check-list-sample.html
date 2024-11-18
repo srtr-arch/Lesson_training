@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http:www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Check List</title>
+    </head>
+    <body>
+        <p th:if="${#lists.isEmpty(myList)}">リストは空です。</p>
+        <p th:unless="${#lists.isEmpty(myList)}">リストにアイテムがあります。</p>
+    </body>
+</html>

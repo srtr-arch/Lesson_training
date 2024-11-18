@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thmeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thymeleafのeach</title>
+    </head>
+    <body>
+        <ul>
+            <li th:each="item:${items}" th:text="${item}">Itemが入ります</li>
+        </ul>
+    </body>
+</html>

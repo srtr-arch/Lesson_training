@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form th:action="@{/top}" th:method="post" th:object="${userInput}">
+        メール<input type="text" th:field="*{mail}"><br>
+        パスワード<input type="password" th:field="*{password}"><br>
+        <input type="submit" value="送信">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.thmeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+</head>
+<body>
+    <P th:text="${#temporals.format(now,'HH:mm:ss')}"></P>
+    <p th:if ="${bool}">メッセージを表示します</p>
+    <p th:text="${judgement}"></p>
+    <p th:if="${#lists.isEmpty(items)}">リストは空です</p>
+    <p th:unless="${#lists.isEmpty(items)}">リストにアイテムがあります</p>
+    <ul>
+        <li th:each="user :${users}" th:text="${user}"></li>
+    </ul>
+    <p th:text="'合計:'+${#aggregates.sum(numbers)}"></p>
+    <ul>
+        <li th:each="number:${numbers}" th:text="${number}"></li>
+    </ul>
+    <p th:text="'平均: '+${#aggregates.avg(numbers)}"></p>
+    <table>
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+        </tr>
+        <tr th:each="product:${products}">
+            
+            <td th:text="${product.getName()}"></td>
+            <td th:text="${product.getPrice()}"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>名前</th>
+            <th>年齢</th>
+        </tr>
+        <tr th:each="person:${people}">
+            <td th:text="${person.getName()}"></td>
+            <td th:text="${person.getAge()}"></td>
+        </tr>
+    </table>
+</body>
+</html>
