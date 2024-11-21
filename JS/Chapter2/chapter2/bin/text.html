@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>text.jsonからデータを取得する</title>
+</head>
+<body>
+    <script type = "text/javascript">
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET","./text.json");
+        xhr.responseType = "json";
+        xhr.onload = function(){
+        console.log(xhr.response["message"]);
+        };
+
+        xhr.send();
+        // xhr.onload = function(){
+
+            
+        // }
+    </script>
+    
+</body>
+</html>
