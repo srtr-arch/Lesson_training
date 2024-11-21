@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>classRoom.jsonからデータを取得する</title>
+    <style type="text/css">
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="classRoom">
+        <p id="roomNo">クラス番号:</p>
+        <ul id="member"></ul>
+    </div>
+    <script type="text/javascript">
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "./classRoom.json");
+        xhr.responseType = "json";
+
+        xhr.onload = function () {
+            let roomNo = document.createElement("span");
+            console.log(xhr.response["roomNo"]);
+            roomNo.textContent = xhr.response.roomNo;
+            console.log(roomNo);
+            document.getElementById("roomNo").appendChild(roomNo);
+            console.log(this.response["members"]);
+            for (let key in this.response["members"]) {
+                let ul = document.createElement("p");
+                ul.textContent =
+                    this.response["members"][key]["id"] + ":" + this.response["members"][key]["name"];
+                document.getElementById("member").appendChild(ul);
+                console.log(this.response["members"][key]["id"]);
+            }
+        };
+        xhr.send();
+
+    </script>
+</body>
+
+</html>
